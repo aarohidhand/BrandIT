@@ -1,0 +1,242 @@
+body{
+    background: #fafafa;
+    background: linear-gradient(0deg, rgba(250, 250, 250, 1) 0%, rgba(255, 255, 255, 1) 31%, rgba(235, 207, 249, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1d2829",endColorstr="#1d2829",GradientType=1);
+    color: rgb(0, 0, 0);
+    padding: 3rem;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    max-width: 100%;
+
+}
+
+.logo img {
+    height: 4em;       
+    width: auto;       
+    max-width: 100%;   
+}
+
+.reg{
+    padding: 0.6rem 1.6rem;
+    font-size: 1.5rem;
+    background-color: #7d6b9e;
+    border: 1.4px solid #000000;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #f8f3f3;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.reg:hover{
+    background-color: #ae87b9;
+    white-space: nowrap;
+}
+
+main{
+    overflow: hidden;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 85vh;
+}
+
+.title{
+    margin-top: 3rem;
+}
+
+main h1{
+    text-align: center;
+    font-size: 10rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+    line-height: 1;
+    background-color: #905aa3;
+    color: transparent;
+    background-clip: text;
+    transition: 0.5s;
+}
+main h1:hover{
+    text-align: center;
+    background-color: #c9a8d5;
+    color: transparent;
+    background-clip: text;
+}
+
+
+
+.descsec{
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.desc{
+    
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-weight: 500;
+    letter-spacing: 1px;
+    max-width: 50rem;
+    margin-top: 6%;
+}
+
+.desc a{
+    text-decoration: none;
+    color: black;
+}
+
+
+section{
+    margin-top: 25%;
+}
+.query {
+    margin-top: 6rem; 
+    max-width: 550px;
+    margin-inline: auto;
+    padding: 2rem 2.5rem;
+    background-color: #f9f5ff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+.query h3 {
+    text-align: center;
+    color: #5b21b6;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.query label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.query input,
+.query textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.query input:focus,
+.query textarea:focus {
+    border-color: #a78bfa;
+    outline: none;
+    box-shadow: 0 0 6px rgba(167, 139, 250, 0.3);
+}
+
+.query button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #7c3aed;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.query button:hover {
+    background-color: #5b21b6;
+}
+
+.planet{
+    position: absolute;
+    right: 20%;
+    width: 130%;
+    height: 130%;
+}
+
+@media(max-width: 1400px){
+    main h1{
+        font-size: 6.3rem;
+        letter-spacing: 0;
+    }
+    .descsec{
+        margin-bottom: 1rem;
+    }
+    .desc{
+        font-size: 2rem;
+        max-width: 30rem;
+    }
+}
+
+@media(max-width: 768px){
+    main h1{
+        display: block;
+        font-size: 6.3rem;
+        letter-spacing: 0;
+
+    }
+
+
+    .descsec{
+        margin-bottom: 1rem;
+    }
+    .desc{
+        font-size: 1.5rem;
+        max-width: 25rem;
+    }
+}
+
+@media (max-width: 480px){
+    body{
+        padding: 1rem;
+    }
+
+    main h1{
+        font-size: 3rem;
+    }
+
+    .logo{
+        font-size: 1.2rem;
+    }
+    .reg{
+        padding: 0.4rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    .descsec{
+        margin-bottom: 1rem;
+    }
+    .desc{
+        font-size: 1rem;
+        max-width: 13rem;
+    }
+
+}
