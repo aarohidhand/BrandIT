@@ -93,28 +93,28 @@ function dragEnd() {
 
 
         // Winning condition check
-        let tiles = document.querySelectorAll("#board img");
-        let isComplete = true;
-        for (let i = 0; i < tiles.length; i++) {
-            let correct = (i + 1) + ".jpg";
-            if (!tiles[i].src.includes(correct)) {
-                isComplete = false;
-                break;
-            }
+    let tiles = document.querySelectorAll("#board img");
+    let isComplete = true;
+    for (let i = 0; i < tiles.length; i++) {
+        let correct = (i + 1) + ".jpg";
+        if (!tiles[i].src.includes(correct)) {
+            isComplete = false;
+            break;
         }
-    
-        if (isComplete) {
-            
-            
-            // OPTIONAL: Scroll to top
-            window.scrollTo({ top: 0, behavior: "smooth" });
-    
-            
-            heading.style.display="none"
-            board.style.display="none"
-            tur.style.display="none"
-            winmsg.style.display="block"
-        }
+    }
+
+    if (isComplete==true) {
+        
+        
+        // OPTIONAL: Scroll to top
+        window.scrollTo({ top: 0, behavior: "smooth" });
+
+        
+        heading.style.display="none"
+        board.style.display="none"
+        tur.style.display="none"
+        winmsg.style.display="block"
+    }
     
 
 

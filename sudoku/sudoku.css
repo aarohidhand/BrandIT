@@ -4,8 +4,20 @@
     font-family: 'Pirata One', cursive;
 }
 body{
-    background-color: black;
+  background: #fafafa;
+  background: linear-gradient(0deg, rgba(250, 250, 250, 1) 0%, rgba(255, 255, 255, 1) 31%, rgba(235, 207, 249, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1d2829",endColorstr="#1d2829",GradientType=1);
+  height: 100vh;
+  width: 100vw;
+  /* background-color: var(--page-background); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  flex-direction: column;
 }
+
 
 .title{
     width: 99vw;
@@ -89,15 +101,6 @@ input{
     --page-background: oklch(10% 0.0666 var(--hue));
   }
 
-  body {
-    background-color: var(--page-background);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: 'Raleway', sans-serif;
-  }
 
   button {
     --button-background: oklch(20% 0.0666 var(--hue));
@@ -211,3 +214,46 @@ main{
     display: none;
 }
 
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  width: 95vw;
+
+}
+
+
+.logo{
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  max-width: 100%;
+  color: black;
+
+}
+
+.logo img {
+  height: 4em;       
+  width: auto;       
+  max-width: 100%;   
+}
+
+.reg{
+  padding: 0.6rem 1.6rem;
+  font-size: 1.5rem;
+  background-color: #7d6b9e;
+  border: 1.4px solid #000000;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #f8f3f3;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.reg:hover{
+  background-color: #ae87b9;
+  white-space: nowrap;
+}
