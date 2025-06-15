@@ -1,7 +1,4 @@
-let winmsg=document.querySelector('.winmsg')
-let heading=document.querySelector('.heading')
-let board=document.querySelector('.board')
-let tur=document.querySelector('.tur')
+
 var rows = 3;
 var columns = 3;
 
@@ -56,6 +53,11 @@ function dragDrop() {
     otherTile = this; //this refers to the img tile being dropped on
 }
 
+let winmsg=document.querySelector('.winmsg')
+let heading=document.querySelector('.heading')
+let board=document.querySelector('#board')
+let tur=document.querySelector('.tur')
+
 function dragEnd() {
     if (!otherTile.src.includes("3.jpg")) {
         return;
@@ -108,6 +110,8 @@ function dragEnd() {
         
         // OPTIONAL: Scroll to top
         window.scrollTo({ top: 0, behavior: "smooth" });
+
+        console.log("got")
 
         
         heading.style.display="none"
