@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Cards</title>
+    <link rel="stylesheet" href="memory.css" />
+  </head>
+  <body>
+    <header>
+        <div class="logo">
+            <a href=""><img src="WIE.svg"></a>
+            IEEE WIE MUJ
+        </div>
+        <a href="https://brand-it-2-0.vercel.app/" class="reg">Home</a>
+    </header>
+    <h1 class="title1"> 🗝️ "The Forgotten Flip"&#x1F9E0;</h1>
+    <h3 class="title2">Cards hold the key... if you remember</h3>
+
+    <div class="controls">
+      <button id="restart-btn">&#x1F504; Restart</button>
+      <span id="timer">&#x23F1; Time: 0s</span>
+      <span id="best-time">&#x1F3C6; Best: --</span>
+    </div>
+
+    <div class="game-board" id="game-board">
+      <p id="moves">Moves: 0</p>
+      <div id="win-message"> You Won!</div>
+
+      <audio src="./audio/flip.mp3" id="flip-sound"></audio>
+      <audio src="./audio/match-found.mp3" id="match-sound"></audio>
+      <audio src="./audio/win-sound.mp3" id="win-sound"></audio>
+    </div>
+    <div class="winmsg">
+        <h1 class="mar">🗝️ The Vault Has Opened!</h1>
+        <h2 class="mar">Your memory has unlocked a forgotten truth.</h2>    
+        <h2 class="mar">But the path doesn’t end here.</h2>    
+        <h2 class="mar">Tap the button to reveal your next challenge.</h2>   
+        <a href="memoryrev.html"><button class="mar reg">NEXT CLUE</button></a> 
+    </div>
+    <script src="memory.js"></script>
+  </body>
+</html>
