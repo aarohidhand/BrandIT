@@ -49,6 +49,17 @@ img1diff1.addEventListener("click" , ()=>{
     }
     
 })
+img1diff1.addEventListener("touchstart" , ()=>{
+    console.log("clicked")
+    img1diff1.style.borderColor="white"
+    img2diff1.style.borderColor="white"
+    diff1=1
+    if(iscom() == true){
+        console.log("completed")
+        completed();
+    }
+    
+})
 img1diff2.addEventListener("click" , ()=>{
     console.log("clicked")
     img1diff2.style.borderColor="white"
