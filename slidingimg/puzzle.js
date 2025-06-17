@@ -58,8 +58,7 @@ let heading=document.querySelector('.heading')
 let board=document.querySelector('#board')
 let tur=document.querySelector('.tur')
 
-function dragEnd(e) {
-    e.preventDefault();
+function dragEnd() {
     if (!otherTile.src.includes("3.jpg")) {
         return;
     }
