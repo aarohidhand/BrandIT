@@ -110,6 +110,7 @@ img{
     border-style: solid;
     border-color: transparent;
     background-color: transparent;
+    z-index: 20;
     
 }
 #img1diff1 , #img2diff1{

@@ -49,17 +49,6 @@ img1diff1.addEventListener("click" , ()=>{
     }
     
 })
-img1diff1.addEventListener("touchstart" , ()=>{
-    console.log("clicked")
-    img1diff1.style.borderColor="white"
-    img2diff1.style.borderColor="white"
-    diff1=1
-    if(iscom() == true){
-        console.log("completed")
-        completed();
-    }
-    
-})
 img1diff2.addEventListener("click" , ()=>{
     console.log("clicked")
     img1diff2.style.borderColor="white"
@@ -216,6 +205,194 @@ img2diff7.addEventListener("click" , ()=>{
     
 })
 img2diff8.addEventListener("click" , ()=>{
+    console.log("clicked")
+    img1diff8.style.borderColor="white"
+    img2diff8.style.borderColor="white"
+    diff8=1
+    if(iscom() == true){
+        console.log("completed")
+        completed();
+    }
+    
+})
+
+
+
+
+
+
+
+
+
+
+
+img1diff1.addEventListener("touchstart" , ()=>{
+    console.log("clicked")
+    img1diff1.style.borderColor="white"
+    img2diff1.style.borderColor="white"
+    diff1=1
+    if(iscom() == true){
+        console.log("completed")
+        completed();
+    }
+    
+})
+img1diff2.addEventListener("touchstart" , ()=>{
+    console.log("clicked")
+    img1diff2.style.borderColor="white"
+    img2diff2.style.borderColor="white"
+    diff2=1
+    if(iscom() == true){
+        console.log("completed")
+        completed();
+    }
+    
+})
+img1diff3.addEventListener("touchstart" , ()=>{
+    console.log("clicked")
+    img1diff3.style.borderColor="white"
+    img2diff3.style.borderColor="white"
+    diff3=1
+    if(iscom() == true){
+        console.log("completed")
+        completed();
+    }
+    
+})
+img1diff4.addEventListener("touchstart" , ()=>{
+    console.log("clicked")
+    img1diff4.style.borderColor="white"
+    img2diff4.style.borderColor="white"
+    diff4=1
+    if(iscom() == true){
+        console.log("completed")
+        completed();
+    }
+    
+})
+img1diff5.addEventListener("touchstart" , ()=>{
+    console.log("clicked")
+    img1diff5.style.borderColor="white"
+    img2diff5.style.borderColor="white"
+    diff5=1
+    if(iscom() == true){
+        console.log("completed")
+        completed();
+    }
+    
+})
+img1diff6.addEventListener("touchstart" , ()=>{
+    console.log("clicked")
+    img1diff6.style.borderColor="white"
+    img2diff6.style.borderColor="white"
+    diff6=1
+    if(iscom() == true){
+        console.log("completed")
+        completed();
+
+    }
+    
+})
+img1diff7.addEventListener("touchstart" , ()=>{
+    console.log("clicked")
+    img1diff7.style.borderColor="white"
+    img2diff7.style.borderColor="white"
+    diff7=1
+    if(iscom() == true){
+        console.log("completed")
+        completed();
+    }
+    
+})
+img1diff8.addEventListener("touchstart" , ()=>{
+    console.log("clicked")
+    img1diff8.style.borderColor="white"
+    img2diff8.style.borderColor="white"
+    diff8=1
+    if(iscom() == true){
+        console.log("completed")
+        completed();
+    }
+    
+})
+img2diff1.addEventListener("touchstart" , ()=>{
+    console.log("clicked")
+    img1diff1.style.borderColor="white"
+    img2diff1.style.borderColor="white"
+    diff1=1
+    if(iscom() == true){
+        console.log("completed")
+        completed();
+    }
+    
+})
+img2diff2.addEventListener("touchstart" , ()=>{
+    console.log("clicked")
+    img1diff2.style.borderColor="white"
+    img2diff2.style.borderColor="white"
+    diff2=1
+    if(iscom() == true){
+        console.log("completed")
+        completed();
+    }
+    
+})
+img2diff3.addEventListener("touchstart" , ()=>{
+    console.log("clicked")
+    img1diff3.style.borderColor="white"
+    img2diff3.style.borderColor="white"
+    diff3=1
+    if(iscom() == true){
+        console.log("completed")
+        completed();
+    }
+    
+})
+img2diff4.addEventListener("touchstart" , ()=>{
+    console.log("clicked")
+    img1diff4.style.borderColor="white"
+    img2diff4.style.borderColor="white"
+    diff4=1
+    if(iscom() == true){
+        console.log("completed")
+        completed();
+    }
+    
+})
+img2diff5.addEventListener("touchstart" , ()=>{
+    console.log("clicked")
+    img1diff5.style.borderColor="white"
+    img2diff5.style.borderColor="white"
+    diff5=1
+    if(iscom() == true){
+        console.log("completed")
+        completed();
+    }
+    
+})
+img2diff6.addEventListener("touchstart" , ()=>{
+    console.log("clicked")
+    img1diff6.style.borderColor="white"
+    img2diff6.style.borderColor="white"
+    diff6=1
+    if(iscom() == true){
+        console.log("completed")
+        completed();
+    }
+    
+})
+img2diff7.addEventListener("touchstart" , ()=>{
+    console.log("clicked")
+    img1diff7.style.borderColor="white"
+    img2diff7.style.borderColor="white"
+    diff7=1
+    if(iscom() == true){
+        console.log("completed")
+        completed();
+    }
+    
+})
+img2diff8.addEventListener("touchstart" , ()=>{
     console.log("clicked")
     img1diff8.style.borderColor="white"
     img2diff8.style.borderColor="white"
