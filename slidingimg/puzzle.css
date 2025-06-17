@@ -114,3 +114,22 @@ h4{
   }
   
   
+
+  @media (max-width: 480px){
+
+    .logo{
+        font-size: 1.2rem;
+    }
+    .reg{
+        padding: 0.4rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    .descsec{
+        margin-bottom: 1rem;
+    }
+    .desc{
+        font-size: 1rem;
+        max-width: 13rem;
+    }
+
+}

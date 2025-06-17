@@ -292,4 +292,7 @@ header{
   body{
     height: 120vh;
   }
+  h1{
+    font-size: 2rem;
+  }
 }
