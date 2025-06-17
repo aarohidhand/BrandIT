@@ -101,3 +101,16 @@ h4{
 .winmsg{
     display: none;
 }
+
+
+.tile {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-drag: none;
+    transition: transform 0.2s ease;
+  }
+  .tile:active {
+    transform: scale(0.95);
+  }
+  
+  

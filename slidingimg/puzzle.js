@@ -1,125 +1,68 @@
 
-var rows = 3;
-var columns = 3;
+  const rows = 3;
+  const columns = 3;
+  let turns = 0;
 
-var currTile;
-var otherTile; //blank tile
+  let winmsg = document.querySelector('.winmsg');
+  let heading = document.querySelector('.heading');
+  let board = document.getElementById("board");
+  let tur = document.querySelector('.tur');
 
-var turns = 0;
+  // Starting shuffled image order
+  const imgOrder = ["4", "2", "8", "5", "1", "6", "7", "9", "3"];
 
-// var imgOrder = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var imgOrder = ["4", "2", "8", "5", "1", "6", "7", "9", "3"];
+  window.onload = () => {
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < columns; c++) {
+        const tile = document.createElement("img");
+        tile.id = `${r}-${c}`;
+        tile.src = imgOrder.shift() + ".jpg";
+        tile.classList.add("tile");
 
-window.onload = function() {
-    for (let r=0; r < rows; r++) {
-        for (let c=0; c < columns; c++) {
-
-            //<img id="0-0" src="1.jpg">
-            let tile = document.createElement("img");
-            tile.id = r.toString() + "-" + c.toString();
-            tile.src = imgOrder.shift() + ".jpg";
-
-            //DRAG FUNCTIONALITY
-            tile.addEventListener("dragstart", dragStart);  //click an image to drag
-            tile.addEventListener("dragover", dragOver);    //moving image around while clicked
-            tile.addEventListener("dragenter", dragEnter);  //dragging image onto another one
-            tile.addEventListener("dragleave", dragLeave);  //dragged image leaving anohter image
-            tile.addEventListener("drop", dragDrop);        //drag an image over another image, drop the image
-            tile.addEventListener("dragend", dragEnd);      //after drag drop, swap the two tiles
-
-            document.getElementById("board").append(tile);
-
-        }
+        tile.addEventListener("click", () => handleClick(tile));
+        board.appendChild(tile);
+      }
     }
-}
+  };
 
-function dragStart() {
-    currTile = this; //this refers to the img tile being dragged
-}
+  function handleClick(tile) {
+    const [r, c] = tile.id.split("-").map(Number);
 
-function dragOver(e) {
-    e.preventDefault();
-}
+    // Check all 4 directions for the empty tile (3.jpg)
+    const directions = [
+      [r - 1, c],
+      [r + 1, c],
+      [r, c - 1],
+      [r, c + 1]
+    ];
 
-function dragEnter(e) {
-    e.preventDefault();
-}
+    for (const [r2, c2] of directions) {
+      const neighbor = document.getElementById(`${r2}-${c2}`);
+      if (neighbor && neighbor.src.includes("3.jpg")) {
+        // Swap tiles
+        const temp = tile.src;
+        tile.src = neighbor.src;
+        neighbor.src = temp;
 
-function dragLeave() {
-
-}
-
-function dragDrop() {
-    otherTile = this; //this refers to the img tile being dropped on
-}
-
-let winmsg=document.querySelector('.winmsg')
-let heading=document.querySelector('.heading')
-let board=document.querySelector('#board')
-let tur=document.querySelector('.tur')
-
-function dragEnd() {
-    if (!otherTile.src.includes("3.jpg")) {
-        return;
-    }
-
-    let currCoords = currTile.id.split("-"); //ex) "0-0" -> ["0", "0"]
-    let r = parseInt(currCoords[0]);
-    let c = parseInt(currCoords[1]);
-
-    let otherCoords = otherTile.id.split("-");
-    let r2 = parseInt(otherCoords[0]);
-    let c2 = parseInt(otherCoords[1]);
-
-    let moveLeft = r == r2 && c2 == c-1;
-    let moveRight = r == r2 && c2 == c+1;
-
-    let moveUp = c == c2 && r2 == r-1;
-    let moveDown = c == c2 && r2 == r+1;
-
-    let isAdjacent = moveLeft || moveRight || moveUp || moveDown;
-
-    if (isAdjacent) {
-        let currImg = currTile.src;
-        let otherImg = otherTile.src;
-
-        currTile.src = otherImg;
-        otherTile.src = currImg;
-
-        turns += 1;
+        turns++;
         document.getElementById("turns").innerText = turns;
+
+        checkWin();
+        return;
+      }
     }
+  }
 
-
-
-
-
-        // Winning condition check
-    let tiles = document.querySelectorAll("#board img");
-    let isComplete = true;
+  function checkWin() {
+    const tiles = document.querySelectorAll("#board img");
     for (let i = 0; i < tiles.length; i++) {
-        let correct = (i + 1) + ".jpg";
-        if (!tiles[i].src.includes(correct)) {
-            isComplete = false;
-            break;
-        }
+      if (!tiles[i].src.includes((i + 1) + ".jpg")) return;
     }
 
-    if (isComplete==true) {
-        
-        
-        // OPTIONAL: Scroll to top
-        window.scrollTo({ top: 0, behavior: "smooth" });
-
-        console.log("got")
-
-        
-        heading.style.display="none"
-        board.style.display="none"
-        tur.style.display="none"
-        winmsg.style.display="block"
-    }
-    
-
-
-}
+    // Puzzle completed
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    heading.style.display = "none";
+    board.style.display = "none";
+    tur.style.display = "none";
+    winmsg.style.display = "block";
+  }
