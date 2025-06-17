@@ -108,7 +108,7 @@ img{
     border: 2px;
     border-radius: 50%;
     border-style: solid;
-    border-color: transparent;
+    /* border-color: transparent; */
     background-color: transparent;
     
 }
@@ -158,7 +158,7 @@ img{
     height: 14%;
     aspect-ratio: 1/1;
     position: relative;
-    top: -148%;
+    top: -147%;
     right: -70%;
     z-index: 2;
 }
@@ -166,7 +166,7 @@ img{
     height: 11%;
     aspect-ratio: 1/1;
     position: relative;
-    top: -171%;
+    top: -170%;
     right: -84%;
     z-index: 2;
 }
@@ -187,6 +187,14 @@ img{
         right: -70%;
         z-index: 2;
     }
+    #img1diff7 , #img2diff7{
+        height: 11%;
+        aspect-ratio: 1/1;
+        position: relative;
+        top: -170%;
+        right: -84%;
+        z-index: 2;
+    }
 }
 @media(max-width:760px){
     #img1diff8 , #img2diff8{
@@ -197,6 +205,54 @@ img{
         right: -70%;
         z-index: 2;
     }
+    #img1diff7 , #img2diff7{
+        height: 11%;
+        aspect-ratio: 1/1;
+        position: relative;
+        top: -173%;
+        right: -84%;
+        z-index: 2;
+    }
+    #img1diff6 , #img2diff6{
+        height: 14%;
+        aspect-ratio: 1/1;
+        position: relative;
+        top: -150%;
+        right: -70%;
+        z-index: 2;
+    }
+}
+
+@media(max-width:550px){
+    .game{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* margin-bottom: 10rem; */
+        /* width: 99.2vw; */
+    }
+
+    .firstimg{
+        margin: 1rem;
+        border: .2rem solid white;
+        border-radius: .5rem;
+        padding: 2px;
+        /* padding-bottom: 0; */
+        width: 60%;
+        aspect-ratio: 679 / 805;
+        overflow: hidden;
+    }
+    .secimg{
+        margin: 1rem;
+        border: .2rem solid white;
+        border-radius: .5rem;
+        /* padding-bottom: 0; */
+        width: 60%;
+        aspect-ratio: 679 / 805;
+        overflow: hidden;
+    }
+
 }
 
 
