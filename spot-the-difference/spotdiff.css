@@ -252,6 +252,9 @@ img{
         aspect-ratio: 679 / 805;
         overflow: hidden;
     }
+    body{
+        height: 140vh;
+    }
 
 }
 
