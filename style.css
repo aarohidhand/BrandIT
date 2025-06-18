@@ -108,7 +108,7 @@ main h1:hover{
     line-height: 1.6;
     font-weight: 500;
     letter-spacing: 1px;
-    max-width: 50rem;
+    max-width: 47rem;
     margin-top: 6%;
 }
 
@@ -122,7 +122,7 @@ section{
     margin-top: 25%;
 }
 .query {
-    margin-top: 6rem; 
+    margin-top: 30rem; 
     max-width: 550px;
     margin-inline: auto;
     padding: 2rem 2.5rem;
@@ -220,6 +220,7 @@ section{
         font-size: 1.5rem;
         max-width: 25rem;
     }
+
 }
 
 @media (max-width: 480px){
@@ -245,22 +246,32 @@ section{
         font-size: 1rem;
         max-width: 13rem;
     }
-
+    
 }
+
+
 /* for the water mark...................................*/
 .cover{
-    height: 6em;
-    width: 10rem;
-    background: #FFFCFF;
+    height: 6rem;
+    width: 94%;
+    background: #fafafa;
     position: absolute;
     top: 142%;
-    right: 20%;
+    /* right: 20%; */
     z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 2rem ;
+    border: .25rem solid #905aa3 ;
+    border-radius: 1rem;
+
 }
 
 @media(max-width:1465px){
     .query{
-        margin-top: 26rem;
+        margin-top: 30rem;
     }
     
 }
@@ -271,7 +282,7 @@ section{
 }
 @media(max-width:1465px) and (min-height:988px){
     .query{
-        margin-top: 34rem;
+        margin-top: 38rem;
     }
     .cover{
         top: 141%;
@@ -282,9 +293,22 @@ section{
         top: 141%;
     }
 }
+@media(max-width:612px){
+    .cover{
+        font-size: 1.5rem;
+    }
+}
 
 @media(max-width:481px){
     .cover{
         top: 137%;
+        font-size: 1rem;
     }
 }
+
+@media(min-width:1063px){
+    .query{
+        margin-top: 38rem;
+    }
+}
+
