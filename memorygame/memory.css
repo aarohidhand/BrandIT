@@ -2,9 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Suga Display', sans-serif;
+}
+@font-face {
+    font-family: 'Suga Display';
+    src: url('../Sugo.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
   }
-  
   body {
     background: #fafafa;
     background: linear-gradient(0deg, rgba(250, 250, 250, 1) 0%, rgba(255, 255, 255, 1) 31%, rgba(235, 207, 249, 1) 100%);

@@ -6,12 +6,18 @@ body{
     padding: 3rem;
 
 }
+@font-face {
+    font-family: 'Suga Display';
+    src: url('Sugo.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Suga Display', sans-serif;
 }
 
 header{
@@ -71,7 +77,7 @@ main h1{
     text-align: center;
     font-size: 10rem;
     font-weight: 900;
-    letter-spacing: 5px;
+    letter-spacing: 10px;
     line-height: 1;
     background-color: #905aa3;
     color: transparent;
@@ -181,6 +187,7 @@ section{
     right: 20%;
     width: 130%;
     height: 130%;
+    /* z-index: 0; */
 }
 
 @media(max-width: 1400px){
@@ -239,4 +246,45 @@ section{
         max-width: 13rem;
     }
 
+}
+/* for the water mark...................................*/
+.cover{
+    height: 6em;
+    width: 10rem;
+    background: #FFFCFF;
+    position: absolute;
+    top: 142%;
+    right: 20%;
+    z-index: 20;
+}
+
+@media(max-width:1465px){
+    .query{
+        margin-top: 26rem;
+    }
+    
+}
+@media(max-width:1465px) and (min-height:882px){
+    .query{
+        margin-top: 30rem;
+    }
+}
+@media(max-width:1465px) and (min-height:988px){
+    .query{
+        margin-top: 34rem;
+    }
+    .cover{
+        top: 141%;
+    }
+}
+@media(min-width:1465px) and (min-height:988px){
+    .cover{
+        top: 141%;
+    }
+}
+
+@media(max-width:481px){
+    .cover{
+        top: 137%;
+    }
 }
